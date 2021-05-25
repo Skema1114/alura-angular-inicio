@@ -12,8 +12,8 @@ export class AppComponent {
   transferencias: Transferencia[] = [];
 
   transferir($event: object) {
-    let data = new Date();
-    let transferencia = {...$event, data: `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`};
+    let dataAgora = new Date();
+    let transferencia = {...$event, data: dataAgora};
 
     this.transferencias.push(transferencia);
   }
