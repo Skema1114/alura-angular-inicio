@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Transferencia {
-  valor?: number,
-  destino?: number
-}
+import { Transferencia } from '../Models/Transferencia';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +8,14 @@ interface Transferencia {
 })
 
 export class AppComponent {
-  title = 'bytebank';
-
-  transferencia: Transferencia = {};
-
+  title = 'bytebank'
+  transferencias: Transferencia[] = [];
 
   transferir($event: object) {
-    this.transferencia = $event;
+    let data = new Date();
+    let transferencia = {...$event, data: `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`};
+
+    this.transferencias.push(transferencia);
   }
 }
 
