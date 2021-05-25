@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TransferenciaService } from 'src/services/transferencia.service';
-import { Transferencia } from '../Models/Transferencia';
+import { TransferenciaService } from './services/transferencia.service';
+import { Transferencia } from './models/Transferencia';
 
 @Component({
   selector: 'app-root',
