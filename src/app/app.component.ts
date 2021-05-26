@@ -13,9 +13,5 @@ export class AppComponent {
   transferencias: Transferencia[] = [];
 
   constructor(private transferenciaService: TransferenciaService) {}
-
-  transferir($event: object) {
-    this.transferenciaService.adicionar($event);
-  }
 }
 
