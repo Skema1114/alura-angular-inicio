@@ -1,4 +1,4 @@
-# Bytebank
+# BytebankFormacaoAngularAlura
 
 ## Neste projeto:
 - Curso: 
